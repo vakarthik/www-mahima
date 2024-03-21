@@ -62,7 +62,7 @@
             <div class="pb-1">Age</div>
           </div>
           <div class="col-sm-8">
-            <div class="pb-1 text-secondary">1.106</div>
+            <div class="pb-1 text-secondary"><p id="age"></p></div>
           </div>
           <div class="col-sm-4">
             <div class="pb-1">Email</div>
@@ -182,5 +182,11 @@
     <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
     <script src="scripts/aos.js?ver=1.2.0"></script>
     <script src="scripts/main.js?ver=1.2.0"></script>
+    <script>
+  		var dob = new Date("01/10/2023");		
+		  var month_diff = Date.now() - dob.getTime();  
+			var age = (month_diff)/(1000*3600*24*365);
+		  document.getElementById('age').innerHTML = age;    
+    </script>
   </body>
 </html>
